@@ -1,0 +1,17 @@
+Command 'docker container ls' result:
+CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                    NAMES
+fbc71ac96d1b   devops-course-service1   "python app.py"          4 minutes ago   Up 4 minutes   0.0.0.0:8199->8199/tcp   devops-course-service1-1
+8cb468806e35   devops-course-service2   "docker-entrypoint.s…"   9 minutes ago   Up 4 minutes   3000/tcp                 devops-course-service2-1
+
+Command 'docker network ls' result:
+NETWORK ID     NAME                       DRIVER    SCOPE
+45ccdaa51204   bridge                     bridge    local
+a6ed9036cd0f   devops-course_my-network   bridge    local
+1b11764cd16b   ex06_default               bridge    local
+54114906ddf6   ex07_default               bridge    local
+e9c954ffa6ee   ex10_default               bridge    local
+2cca47f31a61   ex12_default               bridge    local
+a931783e50c4   host                       host      local
+552ccaae5b02   men_backend                bridge    local
+35cee71a4c63   men_default                bridge    local
+272b2ce43747   none                       null      local
