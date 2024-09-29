@@ -1,2 +1,2 @@
-A short (max 300 words ) text file describing your findings on what containers share with
-the host. Put that to “findings.txt”
+Containers seems to share quite a lot of information with the host. These include for example file system, network and
+process management related information and also help by logging and monitoring the applications.

@@ -1,5 +1,6 @@
 I used the help of ChatGPT for this exercise. As I'm developing with a Windows system, I wanted to get better understanding fast on how to test the Docker containers on 
 top of a Linux system. Mostly this exercise's topics are not yet part of my strongest skillset so ChatGPT was a good guide to get started and tackle problems and errors.
+It was also really helpful with checking if the printed values were somewhat reasonable.
 
 ChatGPT gave quick solutions to test when I didn't know how to proceed or how to fix an error. Even though sometimes it's answers were not correct, chatting with it 
 helped me to get through this exercise much quicker than browsing help from Google would have. One mistake that ChatGPT made quite often was assuming that some of the 
