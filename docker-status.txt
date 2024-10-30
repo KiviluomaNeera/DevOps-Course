@@ -1,12 +1,16 @@
-Command 'docker container ls' result:
-CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                    NAMES
-fbc71ac96d1b   devops-course-service1   "python app.py"          4 minutes ago   Up 4 minutes   0.0.0.0:8199->8199/tcp   devops-course-service1-1
-8cb468806e35   devops-course-service2   "docker-entrypoint.s…"   9 minutes ago   Up 4 minutes   3000/tcp                 devops-course-service2-1
+docker container ls
+CONTAINER ID   IMAGE                      COMMAND                  CREATED          STATUS          PORTS                    NAMES                    
+ef4d37ef6324   nginx:latest               "nginx -g 'daemon of…"   15 minutes ago   Up 15 minutes   0.0.0.0:8198->80/tcp     devops-course-nginx-1
+b8111dcdc095   devops-course-service1_2   "python app.py"          15 minutes ago   Up 15 minutes   0.0.0.0:8201->8199/tcp   devops-course-service1_2-1
+42edc7999b78   devops-course-service1_3   "python app.py"          15 minutes ago   Up 15 minutes   0.0.0.0:8202->8199/tcp   devops-course-service1_3-1
+abf0cb66d18a   devops-course-service2     "docker-entrypoint.s…"   15 minutes ago   Up 15 minutes   3000/tcp                 devops-course-service2-1
+a8381c55b512   devops-course-service1_1   "python app.py"          15 minutes ago   Up 15 minutes   0.0.0.0:8200->8199/tcp   devops-course-service1_1-1
 
-Command 'docker network ls' result:
+docker network ls
 NETWORK ID     NAME                       DRIVER    SCOPE
-45ccdaa51204   bridge                     bridge    local
-a6ed9036cd0f   devops-course_my-network   bridge    local
+45f76bef67e0   bridge                     bridge    local
+8faad72ace1f   cmevsu_default             bridge    local
+b3f92db98ccf   devops-course_my-network   bridge    local
 1b11764cd16b   ex06_default               bridge    local
 54114906ddf6   ex07_default               bridge    local
 e9c954ffa6ee   ex10_default               bridge    local

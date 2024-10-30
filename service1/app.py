@@ -2,7 +2,10 @@ from flask import Flask, jsonify
 import socket
 import subprocess
 import json
+import time
 import requests
+import signal
+import sys
 
 app = Flask(__name__)
 
@@ -43,9 +46,20 @@ def get_service2_info():
         return {"error": str(e)}  # Handle request exceptions
 
 # HTTP route
-@app.route('/')
+@app.route('/request')
 def index():
-    return jsonify(get_container_info())
+    result = jsonify(get_container_info())
+
+    time.sleep(2)
+
+    return result
+
+def graceful_exit(signal, frame):
+    print("Shutting down gracefully")
+    sys.exit(0)
+
+signal.signal(signal.SIGTERM, graceful_exit)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8199)

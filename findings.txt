@@ -1,2 +1,0 @@
-Containers seems to share quite a lot of information with the host. These include for example file system, network and
-process management related information and also help by logging and monitoring the applications.

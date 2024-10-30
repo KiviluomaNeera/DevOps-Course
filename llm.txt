@@ -1,8 +1,8 @@
-I used the help of ChatGPT for this exercise. As I'm developing with a Windows system, I wanted to get better understanding fast on how to test the Docker containers on 
-top of a Linux system. Mostly this exercise's topics are not yet part of my strongest skillset so ChatGPT was a good guide to get started and tackle problems and errors.
-It was also really helpful with checking if the printed values were somewhat reasonable.
+The help of ChatGPT was used while doing this exercise. I wanted to use it as I thought it would provide quick help to my problems. I'm also very beginner
+with these topics implementation wise so ChatGPT made it a lot easier to understand what all kinds of things the exercise would require and how to implement them.
 
-ChatGPT gave quick solutions to test when I didn't know how to proceed or how to fix an error. Even though sometimes it's answers were not correct, chatting with it 
-helped me to get through this exercise much quicker than browsing help from Google would have. One mistake that ChatGPT made quite often was assuming that some of the 
-commands would work straight away in my command prompt event though there was a need to download or set up something first. Otherwise I didn't notice any major mistakes
-that took time to figure out on my own. I think that ChatGPT was able to provide everything for this exercise, but I tried to not do everything with it.
+ChatGPT helped to get quite quickly started with the exercise. I got good idea what for example the nginx configuration file should include and what other things 
+needed to be to get it running. It also helped me to solve errors and give possible fixes to them.
+
+ChatGPT got some configurations wrong at first or didn't take everything into consideration. For example it almost always forgot to add the requirement that the service1
+needed to wait 2 seconds between requests.

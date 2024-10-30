@@ -1,14 +1,44 @@
 services:
-  service1:
+  service1_1:
     build: ./service1
     ports:
-      - "8199:8199"
-    depends_on:
-      - service2
+      - "8200:8199"
     networks:
       - my-network
+
+  service1_2:
+    build: ./service1
+    ports:
+      - "8201:8199"  # Use different host port but same container port
+    networks:
+      - my-network
+
+  service1_3:
+    build: ./service1
+    ports:
+      - "8202:8199"  # Use different host port but same container port
+    networks:
+      - my-network
+
   service2:
     build: ./service2
+    networks:
+      - my-network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8198:80"  # Expose only port 8198
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf  # Custom Nginx config
+      - ./nginx/.htpasswd:/etc/nginx/.htpasswd    # Basic auth credentials
+      - ./nginx/html:/nginx/html        # Static HTML directory
+    entrypoint: [ "nginx", "-g", "daemon off;" ]  # Force Nginx to start normally
+    depends_on:
+      - service1_1
+      - service1_2
+      - service1_3
+      - service2
     networks:
       - my-network
 
